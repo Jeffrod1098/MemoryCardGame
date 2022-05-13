@@ -25,3 +25,10 @@ console.log(cardFlip)
 
 setTimeout(cardFlip, 5000)
 
+
+cards.forEach(function(card){
+    const gameboard = [
+        card.value, card.value, card.value,
+        card.value, card.value, card.value
+    ]
+})
