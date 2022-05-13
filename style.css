@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(171, 171, 171);
+}
+
+h1{
+    text-align: center;
+}
+
+.gameboard{
+    background-color: green;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding:10px;
+    height:600px;
+}
+
+.cards{
+    background-color: white;
+    border : 1px solid black; 
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10%;
+}
