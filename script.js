@@ -6,18 +6,12 @@ const instructions = function(){
 instructions()
 
 const cards = document.querySelectorAll('.cards')
-console.log(cards)
-
-// console.log(cards)
-// const flip = function(){
-//     console.log("flipped")
-// }
 
 const cardFlip = function(){
     cards.forEach(function(card){
         console.log("flipped")
         card.style.backgroundColor = 'red'
-        card.innerText = ''
+        card.style.color = 'red'
     })
 }
 
@@ -26,9 +20,35 @@ console.log(cardFlip)
 setTimeout(cardFlip, 5000)
 
 
+
+
+
+const gameboard = [
+]
+
+
 cards.forEach(function(card){
-    const gameboard = [
-        card.value, card.value, card.value,
-        card.value, card.value, card.value
-    ]
+
+
+    card.addEventListener('click', function(){
+        card.value = card.innerText
+        card.style.background = 'white'
+        gameboard.push(card.value)
+        console.log(gameboard)
+        
+        if(gameboard[0]=== gameboard[1]){
+            setInterval(function(){
+                card.remove()
+            },2000)
+        }
+
+        // else if(gameboard[0] !== gameboard[1]){
+        //     gameboard.pop()
+        //     gameboard.pop()
+            
+        // }
+
+    })
 })
+
+console.log(gameboard)
