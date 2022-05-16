@@ -50,5 +50,10 @@ const cardsImgs = document.querySelectorAll('img.back')
 cardsImgs.forEach(function(backImg){
     backImg.addEventListener('click', flipBackImg)
 })
+// setting up start button
+// setting up my modals for instructions and GAMEOVER sequence
 
+const startBtn = document.querySelector('#startBtn')
+const instructionBtn = document.querySelector('#instructionBtn') 
+const instructionModal = document.querySelector('#instructionModal')
 

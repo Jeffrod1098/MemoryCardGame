@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <h1>Memory Game</h1>
+    <div class="btnContainer">
+        <button id="startBtn">Start</button>
+        <button id="instructionBtn">Instructions</button>
+        <div id="instructionModal" class="modal">
+                <span class="close"></span>
+                <p>INSTRUCTIONS</p>
+            </div>
+        </div>
+    </div>
     <div class="gameboard">
         <div class="cards">
             <img class="front" src="images/BWjack.png">
