@@ -6,16 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Card Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Memory Game</h1>
     <div class="gameboard">
-        <div class="cards" value="">J</div>
-        <div class="cards" value="">K</div>
-        <div class="cards" value="">Q</div>
-        <div class="cards" value="">Q</div>
-        <div class="cards" value="">J</div>
-        <div class="cards" value="">K</div>
+        <div class="cards">
+            <img class="front" src="images/jack.png">
+            <img class="back jack" src="images/backOfCard.png" data-card="jack">
+        </div>
+        <div class="cards" >
+            <img class="front" src="images/king.png">
+            <img class="back king" src="images/backOfCard.png" data-card="king">
+        </div>
+        <div class="cards">
+            <img class="front" src="images/queen.png" >
+            <img class="back queen" src="images/backOfCard.png" data-card="queen">
+        </div>
+        <div class="cards">
+            <img class="front" src="images/queen.png">
+            <img class="back queen" src="images/backOfCard.png" data-card="queen">
+        </div>
+        <div class="cards">
+            <img class="front" src="images/jack.png">
+            <img class="back jack" src="images/backOfCard.png" data-card="jack">
+        </div>
+        <div class="cards">
+            <img class="front" src="images/king.png" >
+            <img class="back king" src="images/backOfCard.png" data-card="king">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
