@@ -55,5 +55,13 @@ cardsImgs.forEach(function(backImg){
 
 const startBtn = document.querySelector('#startBtn')
 const instructionBtn = document.querySelector('#instructionBtn') 
-const instructionModal = document.querySelector('#instructionModal')
+const modal = document.querySelector('#myModal')
+const spanClose = document.querySelector('.close')
 
+instructionBtn.onclick = function(){
+    modal.style.display = 'block'
+}
+
+spanClose.onclick = function(){
+    modal.style.display = 'none'
+}
