@@ -43,9 +43,7 @@ restartBtn.onclick = function(){
     window.location.reload()
 }
 
-nextLevelBtn.onclick = function(){
 
-}
 // when player clicks a card it reveals the clicked card 
 
 let isFlipped = false
@@ -75,4 +73,18 @@ const flipBackImg =  function(){
     }
 
 }
+
+
+// this will add append new cards to the game and cover the cards again so that the sequence starts over again
+nextLevelBtn.onclick = function(){
+
+}
+
+
+const gameBoard = document.querySelector('.gameboard')
+console.log(gameBoard.childElementCount)
+for (let i = gameBoard.childElementCount; i >= 0; i--){
+    gameBoard.appendChild(gameBoard.children[Math.random() * i | 0])
+}
+
 
