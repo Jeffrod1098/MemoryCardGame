@@ -1,20 +1,3 @@
-// const instructions = function(){
-//     confirm('RULES:You must make a match if the two cards turned picture-side-up are identical. When a match is made the cards will be displaced from the game board. If the two cards turned over are not identical YOU LOSE, after pressing OK you will have 5 seconds to memorize the cards.')
-// }
-// instructions()
-
-
-// reveals cards to you after OK for 5 seconds
-
-// backImgs.forEach(function(backImg){
-//     document.addEventListener('DOMContentLoaded',function(){
-//             backImg.style.display = 'none'
-//             setTimeout(function(){
-//                 backImg.style.display = 'block'
-//             }, 5000)
-//     })
-
-// })
 
 const backImgs = document.querySelectorAll('img.back')
 
@@ -37,6 +20,22 @@ backImgs.forEach(function(backImg){
 })
 
 
+// setting up start button
+// setting up my modals for instructions and GAMEOVER sequence
+
+const instructionBtn = document.querySelector('#instructionBtn') 
+const modal = document.querySelector('#myModal')
+const spanClose = document.querySelector('.close')
+const gameOverModal = document.querySelector('#overModal')
+
+instructionBtn.onclick = function(){
+    modal.style.display = 'block'
+}
+
+spanClose.onclick = function(){
+    modal.style.display = 'none'
+}
+
 
 // when player clicks a card it reveals the clicked card 
 
@@ -56,29 +55,10 @@ const flipBackImg =  function(){
         secondCard = this 
         console.log(secondCard.dataset.card)
         if(firstCard.dataset.card !== secondCard.dataset.card){
-            alert('GAMEOVER')
+            // alert('GAMEOVER')
+            gameOverModal.style.display = 'block'
         }
     }
 
 }
 
-
-
-
-// cardsImgs.forEach(function(backImg){
-//     backImg.addEventListener('click', flipBackImg)
-// })
-// setting up start button
-// setting up my modals for instructions and GAMEOVER sequence
-
-const instructionBtn = document.querySelector('#instructionBtn') 
-const modal = document.querySelector('#myModal')
-const spanClose = document.querySelector('.close')
-
-instructionBtn.onclick = function(){
-    modal.style.display = 'block'
-}
-
-spanClose.onclick = function(){
-    modal.style.display = 'none'
-}
