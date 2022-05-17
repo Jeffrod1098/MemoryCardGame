@@ -27,6 +27,7 @@ const instructionBtn = document.querySelector('#instructionBtn')
 const modal = document.querySelector('#myModal')
 const spanClose = document.querySelector('.close')
 const gameOverModal = document.querySelector('#overModal')
+const restartBtn = document.querySelector('#restart')
 
 instructionBtn.onclick = function(){
     modal.style.display = 'block'
@@ -36,15 +37,19 @@ spanClose.onclick = function(){
     modal.style.display = 'none'
 }
 
-
+restartBtn.onclick = function(){
+    window.location.reload()
+}
 // when player clicks a card it reveals the clicked card 
 
 let isFlipped = false
 let firstCard 
 let secondCard
+let clicks = 0
 
 const flipBackImg =  function(){
-    console.log('clicked')
+    clicks ++
+    console.log(clicks)
     this.style.display = 'none'
     if(!isFlipped){
         isFlipped = true
@@ -57,6 +62,8 @@ const flipBackImg =  function(){
         if(firstCard.dataset.card !== secondCard.dataset.card){
             // alert('GAMEOVER')
             gameOverModal.style.display = 'block'
+        } else if(clicks >= 6){
+            console.log('YOU WIN')
         }
     }
 
