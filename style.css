@@ -67,12 +67,13 @@ h1{
     background-color: rgba(0,0,0,0.4);
 }
 
-.modalcontent{
+#instructionModal{
     background-color: #fefefe;
     margin: auto;
     padding: 25px;
     border: 1px solid #888 ;
     width: 80%;
+    margin-top: 20%;
 }
 
 .btnContainer{
