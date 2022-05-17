@@ -28,6 +28,8 @@ const modal = document.querySelector('#myModal')
 const spanClose = document.querySelector('.close')
 const gameOverModal = document.querySelector('#overModal')
 const restartBtn = document.querySelector('#restart')
+const nextLevelModal = document.querySelector('#nxtLvl')
+const nextLevelBtn = document.querySelector('#nextBtn')
 
 instructionBtn.onclick = function(){
     modal.style.display = 'block'
@@ -39,6 +41,10 @@ spanClose.onclick = function(){
 
 restartBtn.onclick = function(){
     window.location.reload()
+}
+
+nextLevelBtn.onclick = function(){
+
 }
 // when player clicks a card it reveals the clicked card 
 
@@ -64,6 +70,7 @@ const flipBackImg =  function(){
             gameOverModal.style.display = 'block'
         } else if(clicks >= 6){
             console.log('YOU WIN')
+            nextLevelModal.style.display = 'block'
         }
     }
 

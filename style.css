@@ -2,7 +2,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Roboto Mono', monospace , sans-serif;
 
 }
 
@@ -67,7 +67,7 @@ h1{
     background-color: rgba(0,0,0,0.4);
 }
 
-#instructionModal, #gameoverModal, #nextLvl{
+#instructionModal, #gameoverModal, #nextLevel{
     background-color: #fefefe;
     margin: auto;
     padding: 25px;
