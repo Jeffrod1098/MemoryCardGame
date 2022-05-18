@@ -89,8 +89,8 @@ nextLevelBtn.onclick = function(){
     nextLevelModal.style.display = 'none'
 
     const btn = document.createElement('button')
-    btn.id = "#startBtn"
-    document.querySelector('').appendChild(btn)
+    btn.id = "#levelTwoBtn"
+    // document.querySelector('btnContainer').appendChild(btn)
 
     for(let i = 0; i <= 1; i++ ){
         const newDiv = document.createElement('div')
@@ -135,13 +135,23 @@ nextLevelBtn.onclick = function(){
             backImg.style.display = 'block'
         }, .1)
 
-
+        startBtn.addEventListener('click',function(){
+            backImgs.forEach(function(backImg){
+                backImg.addEventListener('click', flipBackImg)
+            })
+            backImg.style.display = 'none'
+            setTimeout(function(){
+                backImg.style.display = 'block'
+            }, 4000)
+    })
 })
 })
 
     gameBoard.id = "levelTwoGameBoard"
     const divCard = document.querySelectorAll('div.cards')
     divCard.id = 'cardsLevelTwo'
-
-
+    const btnContainer = document.querySelector('.btnContainer')
+    btnContainer.id= 'btnContainerTwo'
+    const h1 = document.querySelector('h1')
+    // h1.classList.add('')
 }
