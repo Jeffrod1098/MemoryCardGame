@@ -3,12 +3,12 @@ const backImgs = document.querySelectorAll('img.back')
 
 const startBtn = document.querySelector('#startBtn')
 
-const cardsImgs = document.querySelectorAll('img.back')
+// const cardsImgs = document.querySelectorAll('img.back')
 
 
 backImgs.forEach(function(backImg){
     startBtn.addEventListener('click',function(){
-            cardsImgs.forEach(function(backImg){
+            backImgs.forEach(function(backImg){
                 backImg.addEventListener('click', flipBackImg)
             })
             backImg.style.display = 'none'
@@ -87,41 +87,61 @@ for (let i = gameBoard.childElementCount; i >= 0; i--){
 // this will add append new cards to the game and cover the cards again so that the sequence starts over again
 nextLevelBtn.onclick = function(){
     nextLevelModal.style.display = 'none'
-    backImgs.forEach(function(backImg){
-                cardsImgs.forEach(function(backImg){
-                    backImg.addEventListener('click', flipBackImg)
-                backImg.style.display = 'none'
-                setTimeout(function(){
-                    backImg.style.display = 'block'
-                }, .1)
 
-        
-        })
-    })
-    for(let i = 0; i <= 2; i++ ){
+    const btn = document.createElement('button')
+    btn.id = "#startBtn"
+    document.querySelector('').appendChild(btn)
+
+    for(let i = 0; i <= 1; i++ ){
         const newDiv = document.createElement('div')
         newDiv.classList.add("cards")
         const divBackImg = document.createElement('img')
         divBackImg.src = 'images/BWbacknew.png'
+        const divFrontImg = document.createElement('img')
+        divFrontImg.src = 'images/BW7.png' 
+        divFrontImg.classList.add('front')
         divBackImg.classList.add('back')
+        divBackImg.dataset.card= '7'
+        newDiv.appendChild(divFrontImg)
         newDiv.appendChild(divBackImg)
         gameBoard.appendChild(newDiv)
+        divBackImg.style.display = 'block'
     }
+    const newDiv = document.createElement('div')
+    newDiv.classList.add("cards")
+    const divBackImg = document.createElement('img')
+    divBackImg.src = 'images/BWbacknew.png'
+    const divFrontImg = document.createElement('img')
+    divFrontImg.src = 'images/BWdecoyAce.png' 
+    divFrontImg.classList.add('front')
+    divBackImg.classList.add('back')
+    divBackImg.dataset.card= 'ace'
+    newDiv.appendChild(divFrontImg)
+    newDiv.appendChild(divBackImg)
+    gameBoard.appendChild(newDiv)
+
+    setTimeout(function(){
+        divBackImg.style.display = 'block'
+    }, .1)
+
+    const backImgs = document.querySelectorAll('img.back')
+    const cardsImgs = document.querySelectorAll('img.back')
+
+    backImgs.forEach(function(backImg){
+        cardsImgs.forEach(function(backImg){
+            backImg.addEventListener('click', flipBackImg)
+        backImg.style.display = 'none'
+        setTimeout(function(){
+            backImg.style.display = 'block'
+        }, .1)
+
+
+})
+})
+
     gameBoard.id = "levelTwoGameBoard"
     const divCard = document.querySelectorAll('div.cards')
     divCard.id = 'cardsLevelTwo'
-    backImgs.forEach(function(backImg){
-        startBtn.addEventListener('click',function(){
-                cardsImgs.forEach(function(backImg){
-                    backImg.addEventListener('click', flipBackImg)
-                })
-                backImg.style.display = 'none'
-                setTimeout(function(){
-                    backImg.style.display = 'block'
-                }, 4000)
-        })
-    
-    })
 
 
 }
