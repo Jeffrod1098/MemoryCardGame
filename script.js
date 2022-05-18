@@ -14,7 +14,7 @@ backImgs.forEach(function(backImg){
             backImg.style.display = 'none'
             setTimeout(function(){
                 backImg.style.display = 'block'
-            }, 5000)
+            }, 2000)
     })
 
 })
@@ -75,16 +75,53 @@ const flipBackImg =  function(){
 }
 
 
-// this will add append new cards to the game and cover the cards again so that the sequence starts over again
-nextLevelBtn.onclick = function(){
-
-}
-
-
+// This radomizes the order in which the cards appear.
+// https://javascript.tutorialink.com/javascript-shuffle-html-list-element-order/
 const gameBoard = document.querySelector('.gameboard')
-console.log(gameBoard.childElementCount)
 for (let i = gameBoard.childElementCount; i >= 0; i--){
     gameBoard.appendChild(gameBoard.children[Math.random() * i | 0])
 }
 
 
+
+// this will add append new cards to the game and cover the cards again so that the sequence starts over again
+nextLevelBtn.onclick = function(){
+    nextLevelModal.style.display = 'none'
+    backImgs.forEach(function(backImg){
+                cardsImgs.forEach(function(backImg){
+                    backImg.addEventListener('click', flipBackImg)
+                backImg.style.display = 'none'
+                setTimeout(function(){
+                    backImg.style.display = 'block'
+                }, .1)
+
+        
+        })
+    })
+    for(let i = 0; i <= 2; i++ ){
+        const newDiv = document.createElement('div')
+        newDiv.classList.add("cards")
+        const divBackImg = document.createElement('img')
+        divBackImg.src = 'images/BWbacknew.png'
+        divBackImg.classList.add('back')
+        newDiv.appendChild(divBackImg)
+        gameBoard.appendChild(newDiv)
+    }
+    gameBoard.id = "levelTwoGameBoard"
+    const divCard = document.querySelectorAll('div.cards')
+    divCard.id = 'cardsLevelTwo'
+    backImgs.forEach(function(backImg){
+        startBtn.addEventListener('click',function(){
+                cardsImgs.forEach(function(backImg){
+                    backImg.addEventListener('click', flipBackImg)
+                })
+                backImg.style.display = 'none'
+                setTimeout(function(){
+                    backImg.style.display = 'block'
+                }, 4000)
+        })
+    
+    })
+
+
+}

@@ -67,7 +67,7 @@ h1{
     background-color: rgba(0,0,0,0.4);
 }
 
-#instructionModal, #gameoverModal, #nextLevel{
+#gameoverModal, #nextLevel{
     background-color: #fefefe;
     margin: auto;
     padding: 25px;
@@ -76,6 +76,16 @@ h1{
     margin-top: 20%;
     text-align: center;
 }
+
+#instructionModal{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #888 ;
+    width: 80%;
+    margin-top: 20%;
+}
+
 
 .btnContainer{
     display: flex;
@@ -92,3 +102,24 @@ button{
     margin: 5px;
 }
 
+
+#levelTwoGameBoard{
+    display: flex;
+    display: flex;
+    /* border: 1px solid black; */
+    background-color: white;
+    width: 700px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+
+#cardsLevelTwo{
+    width: 20%;
+    height: 35%;
+    background-color: white;
+    border : 1px solid white; 
+    position: relative;
+}
