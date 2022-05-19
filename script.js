@@ -150,8 +150,10 @@ nextLevelBtn.onclick = function(){
     btnContainer.id= 'btnContainerTwo'
     const h1 = document.querySelector('h1')
 
+
    backImgs.forEach(function(backImg){
-        backImg.addEventListener('click', flipBackImg)
+       backImg.removeEventListener('click', flipBackImg)
+        // backImg.addEventListener('click', flipBackImg)
         backImg.style.display = 'none'
         setTimeout(function(){
             backImg.style.display = 'block'
@@ -159,6 +161,9 @@ nextLevelBtn.onclick = function(){
     })
 
     function showCards () {
+   backImgs.forEach(function(backImg){
+        backImg.addEventListener('click', flipBackImg)
+   })
         backImgs.forEach(function(backImg){
             backImg.style.display = 'none'
             setTimeout(function(){
