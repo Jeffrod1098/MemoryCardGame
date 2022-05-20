@@ -1,6 +1,6 @@
 # MemoryCardGame
 
-![image of project](images/Project%231ScreenShot.png)
+![image of project](images/Project1ScreenShot.png)
 
 
 ## Preview 
