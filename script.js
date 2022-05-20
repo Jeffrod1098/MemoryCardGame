@@ -1,18 +1,12 @@
 
 const backImgs = document.querySelectorAll('img.back')
-
 const startBtn = document.querySelector('#startBtn')
-
-// const cardsImgs = document.querySelectorAll('img.back')
-
 let startBtnClick = 0
 
 const startBtnFunc = function(){
     if(startBtnClick === 0){
         backImgs.forEach(function(backImg){
-                    backImgs.forEach(function(backImg){
                         backImg.addEventListener('click', flipBackImg)
-                    })
                     backImg.style.display = 'none'
                     setTimeout(function(){
                         backImg.style.display = 'block'
@@ -26,8 +20,6 @@ const startBtnFunc = function(){
 }
 
     startBtn.addEventListener('click', startBtnFunc)
-
-
 
 
 // setting up start button
@@ -58,6 +50,8 @@ restartBtn.onclick = function(){
 endBtn.onclick = function(){
     window.location.reload()
 }
+
+
 // when player clicks a card it reveals the clicked card 
 
 let isFlipped = false
@@ -97,7 +91,6 @@ for (let i = gameBoard.childElementCount; i >= 0; i--){
 }
 
 
-
 // this will add append new cards to the game and cover the cards again so that the sequence starts over again
 nextLevelBtn.onclick = function(){
     startBtnClick = 0
@@ -131,17 +124,13 @@ nextLevelBtn.onclick = function(){
     newDiv.appendChild(divBackImg)
     gameBoard.appendChild(newDiv)
 
-    // setTimeout(function(){
-    //     divBackImg.style.display = 'block'
-    // }, .00001)
+
+
 
     const backImgs = document.querySelectorAll('img.back')
-    // const cardsImgs = document.querySelectorAll('img.back')
 
-    // After next level, reselect all divs with queryselector, run startBtnFunc using the same variable but that variable includes the past divs and new divs
-    // You can run as many levels as you want.
-    // Also at the end of startBtnFunc you want to remove eventclicker from start so that it doesn't duplicate
-    // 
+
+
 
     gameBoard.id = "levelTwoGameBoard"
     const divCard = document.querySelectorAll('div.cards')
@@ -153,7 +142,6 @@ nextLevelBtn.onclick = function(){
 
    backImgs.forEach(function(backImg){
        backImg.removeEventListener('click', flipBackImg)
-        // backImg.addEventListener('click', flipBackImg)
         backImg.style.display = 'none'
         setTimeout(function(){
             backImg.style.display = 'block'
