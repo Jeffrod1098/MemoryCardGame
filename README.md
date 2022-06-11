@@ -1,11 +1,17 @@
 # MemoryCardGame
 
-![image of project](images/Project1ScreenShot.png)
+##WireFrame
+
+<img width="1398" alt="Screen Shot 2022-05-13 at 11 17 36 AM" src="https://user-images.githubusercontent.com/102834324/173197718-30bb201a-f24a-43aa-a99d-2977b7f42fc5.png">
 
 
 ## Preview 
 This game is a memory card game with a very simple black and white theme, to throw the player off.
+![image of project](images/Project1ScreenShot.png)
 
+
+## Deployed site :
+https://wondrous-bubblegum-f75309.netlify.app/
 
 ## Technology used :
 
